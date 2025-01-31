@@ -1,43 +1,49 @@
-# 🚀 Teste de Desenvolvedor Web - Bloomin
+# Teste para Desenvolvimento Web
 
-Este projeto é um teste prático utilizando **PHP, HTML, SASS, Bootstrap 5 e JavaScript** para a construção de um layout responsivo.
+Este repositório contém um teste para desenvolvimento web, utilizando tecnologias modernas para estruturação de um site.
 
----
+## Tecnologias Utilizadas
+- **PHP**: Backend para manipulação de dados.
+- **HTML**: Estrutura do site.
+- **SASS**: Pré-processador CSS para melhor organização dos estilos.
+- **Bootstrap 5**: Framework CSS para estilização responsiva e componentes prontos.
 
-## 📌 Tecnologias utilizadas
-- **PHP** → Para modularização e inclusão de arquivos dinâmicos.
-- **HTML** → Estruturação das páginas.
-- **SASS** → Estilização com pré-processador CSS.
-- **Bootstrap 5** → Framework CSS para responsividade.
-- **JavaScript** → Funcionalidades dinâmicas no front-end.
+## Estrutura do Projeto
+```
+/
+|-- css/         # Arquivos CSS compilados
+|-- fonts/       # Fontes utilizadas
+|-- img/         # Imagens do projeto
+|-- inc/         # Arquivos PHP auxiliares
+|-- js/          # Scripts JavaScript
+|-- scss/        # Arquivos SASS (pré-processador CSS)
+|-- .htaccess    # Configurações do servidor
+|-- index.php    # Página principal
+|-- readme.md    # Documentação do projeto
+```
 
----
-
-## 🛠 Como instalar e rodar o projeto
-
-### 1️⃣ Clonar o repositório  
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd TESTE-BLOOMIN
-
-2️⃣ Instalar dependências (SASS)
-Caso não tenha o SASS instalado, instale com npm:
-
-bash
-Copiar
-Editar
-npm install -g sass
-Para compilar os arquivos SASS para CSS:
-
-bash
-Copiar
-Editar
-sass --watch scss:css
-3️⃣ Rodar o projeto localmente
-Se tiver o PHP instalado, rode o seguinte comando para iniciar um servidor local:
-
-bash
-Copiar
-Editar
-php -S localhost:8000
-Agora, acesse no navegador: http://localhost:8000
+## Como Instalar e Rodar
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/PedroBigas/teste-bloomin.git
+   ```
+2. Acesse a pasta do projeto:
+   ```sh
+   cd teste-bloomin
+   ```
+3. Instale as dependências do Bootstrap 5 (caso necessário):
+   ```sh
+   npm install bootstrap
+   ```
+4. Compile os arquivos SASS:
+   ```sh
+   sass --watch style.scss:../css/style.css
+   ```
+5. Execute um servidor local (caso não tenha um ambiente LAMP/WAMP/XAMPP):
+   ```sh
+   php -S localhost:8000
+   ```
+6. Acesse no navegador:
+   ```
+   http://localhost:8000
+   ```
