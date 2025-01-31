@@ -1,0 +1,65 @@
+.footer {
+    background-color: #121212;
+    color: #f8f9fa;
+    padding: 3rem 0;
+
+    h5 {
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #f8f9fa;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #757575
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 0.5rem;
+
+            a {
+                color: #757575 !important;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $theme-color !important;
+                }
+
+            }
+
+
+            p {
+                color: #f8f9fa;
+                font-size: 16px;
+                text-decoration: none;
+
+            }
+
+            em {
+                font-size: 14px;
+                color: #757575;
+            }
+        }
+    }
+
+    .text-center {
+        margin-top: 2rem;
+        font-size: 0.85rem;
+    }
+
+    .about-content {
+
+        p {
+            color: #f8f9fa;
+        }
+
+    }
+
+
+
+}

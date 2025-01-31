@@ -1,0 +1,661 @@
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+	font-family: $font_2;
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font_1;
+	color: $theme-color4;
+
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 500;
+	text-transform: normal;
+}
+
+p {
+	font-family: $font_2;
+	color: #000;
+
+	font-size: 16px;
+	line-height: 30px;
+	margin-bottom: 15px;
+	font-weight: normal;
+}
+
+.img {
+	max-width: 100%;
+	@include transition(.3s);
+}
+
+.f-left {
+	float: left
+}
+
+.f-right {
+	float: right
+}
+
+.fix {
+	overflow: hidden
+}
+
+.clear {
+	clear: both;
+}
+
+a,
+.button {
+	@include transition(.3s);
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a {
+	color: rgb(99, 92, 92);
+}
+
+a:hover {
+	color: #fff;
+}
+
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	text-decoration: none;
+}
+
+a,
+button {
+	color: #000;
+	outline: medium none;
+	text-decoration: none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+	outline: 0
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+input:focus::-moz-placeholder {
+	opacity: 0;
+	-webkit-transition: .4s;
+	-o-transition: .4s;
+	transition: .4s;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	list-style: none
+}
+
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+
+.btn2 {
+	background: $theme-color2;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-family: $font_1;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 15px;
+	border-radius: 5px;
+	-moz-user-select: none;
+	font-weight: 400;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: color 0.4s linear;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	&::after {
+		position: absolute;
+		content: "";
+		width: 0;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		background-color: $theme-color;
+		border-radius: 5px;
+		box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+			7px 7px 20px 0px rgba(0, 0, 0, .1),
+			4px 4px 5px 0px rgba(0, 0, 0, .1);
+		transition: all 0.3s ease;
+	}
+
+	&:hover {
+		color: #fff;
+	}
+
+	&:hover:after {
+		left: 0;
+		width: 100%;
+	}
+
+	&:active {
+		top: 2px;
+	}
+}
+
+.btn3 {
+	background: $theme-color2;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-family: $font_1;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 15px;
+	border-radius: 5px;
+	-moz-user-select: none;
+	font-weight: 400;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: color 0.4s linear;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	&::after,
+	&::before {
+		position: absolute;
+		content: "";
+		right: 0;
+		bottom: 0;
+		background: $theme-color2;
+		transition: all 0.3s ease;
+	}
+
+	&::before {
+		height: 0%;
+		width: 2px;
+	}
+
+	&::after {
+		width: 0%;
+		height: 2px;
+	}
+
+	&:hover {
+		color: #fff;
+		font-weight: 500;
+		background: transparent;
+		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	}
+
+	&:hover:before {
+		height: 100%;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+
+	&:active {
+		top: 2px;
+	}
+}
+
+.header-btn {
+	padding: 20px 40px;
+
+	@media #{$lg} {
+		padding: 20px 20px;
+	}
+}
+
+.btn-radius {
+	border-radius: 50%;
+	background: $theme-color2;
+	color: #fff;
+	font-size: 35px;
+	padding: 12px 25px;
+	margin-top: 20px;
+}
+
+/* scrollUp */
+#scrollUp,
+#back-top {
+	background: $theme-color3;
+	height: 50px;
+	width: 50px;
+	right: 31px;
+	bottom: 18px;
+	position: fixed;
+	z-index: 10;
+
+	@media #{$xs} {
+		right: 16px;
+	}
+
+	font-size: 20px;
+	text-align: center;
+	border-radius: 50%;
+	line-height: 48px;
+	border: 2px solid transparent;
+	box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+
+	a i {
+		display: block;
+		line-height: 50px;
+		color: #fff;
+
+		&:hover {
+			color: #000;
+			transition: .8s;
+		}
+	}
+
+}
+
+#scrollUp:hover {
+	color: #fff;
+}
+
+/* Sticky*/
+.sticky-bar {
+	left: 0;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+	box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+	z-index: 5;
+	-webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+	animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+	-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+	background: #fff;
+}
+
+/* Sticky end */
+
+
+/*--- Margin & Padding --*/
+
+/*-- Margin Top --*/
+@for $i from 1 through 40 {
+	.mt-#{5 * $i} {
+		margin-top: 5px * $i;
+	}
+}
+
+/*-- Margin Bottom --*/
+@for $i from 1 through 40 {
+	.mb-#{5 * $i} {
+		margin-bottom: 5px *$i;
+	}
+}
+
+/*-- Margin Left --*/
+@for $i from 1 through 40 {
+	.ml-#{5 * $i} {
+		margin-left: 5px * $i;
+	}
+}
+
+/*-- Margin Right --*/
+@for $i from 1 through 40 {
+	.mr-#{5 * $i} {
+		margin-right: 5px *$i;
+	}
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through 40 {
+	.pt-#{5 * $i} {
+		padding-top: 5px *$i;
+	}
+}
+
+.pt-260 {
+	padding-top: 260px;
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through 40 {
+	.pb-#{5 * $i} {
+		padding-bottom: 5px *$i;
+	}
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through 40 {
+	.pl-#{5 * $i} {
+		padding-left: 5px *$i;
+	}
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through 40 {
+	.pr-#{5 * $i} {
+		padding-right: 5px *$i;
+	}
+}
+
+.mob-top {
+	position: relative;
+	padding-top: 100px;
+
+	@media #{$laptop} {
+		padding-top: 100px;
+	}
+
+	@media #{$lg} {
+		padding-top: 100px;
+	}
+
+	@media #{$md} {
+		padding-top: 127px;
+	}
+
+	@media #{$sm} {
+		top: 36px;
+		padding-top: 90px;
+	}
+
+	@media #{$xs} {
+		top: 90px;
+		padding-top: 36px;
+	}
+
+}
+
+.filter {
+	filter: brightness(0);
+}
+
+.invert {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	i {
+		background: #222;
+		padding: 15px 20px;
+		font-size: 1.5em;
+	}
+
+}
+
+.carousel-indicators {
+	button {
+		width: 10px !important;
+		height: 10px !important;
+		margin: 0 5px !important;
+		border-radius: 50%;
+
+		&.active {
+			background-color: $theme-color !important;
+		}
+	}
+
+}
+
+.box-icon {
+	img {
+		width: 50px;
+		height: 50px;
+		object-fit: contain;
+		margin-right: 15px;
+	}
+
+	.content {
+		h2 {
+			font-size: 1.2em;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: .9em;
+		}
+	}
+}
+
+.counter-section {
+	background: url(../img/gallery/fundo-counter.jpg) no-repeat center center / cover fixed;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	padding: 50px 0;
+	box-shadow: inset 0 0 0 1000px rgba(21, 22, 22, .55);
+	overflow: hidden;
+
+
+	.counter-item {
+		i {
+			font-size: 40px;
+			margin-bottom: 10px;
+		}
+
+		span {
+			font-size: 2em;
+			display: block;
+			font-weight: bold;
+			color: #ff7f27;
+		}
+
+		p {
+			color: #fff;
+		}
+	}
+}
+
+.gallery-area {
+	.gallery-image{
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+	}
+	
+}
+
+.cta {
+	background: #ff7800;
+	padding: 40px;
+
+	.container-fluid {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 20px 10%;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: white;
+	}
+
+	.btn {
+		padding: 10px 20px;
+		font-size: 1rem;
+		background: white;
+		color: black;
+		transition: 0.3s;
+
+		&:hover {
+			background: black;
+			color: white;
+		}
+	}
+}
+
+.services-area {
+	img {
+		width: 30px;
+		height: 30px;
+		object-fit: contain;
+		margin-right: 15px;
+	}
+
+	.content {
+		h3 {
+			color: #000;
+			font-size: 1.2em;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: .9em;
+		}
+	}
+}
+
+.plains-area {
+	background: #f7f7f7;
+	padding: 65px 0;
+
+	.card {
+		border-radius: 2px;
+		transition: transform 0.3s ease-in-out;
+		padding: 50px 20px 30px;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+
+		h3 {
+			font-weight: 500;
+			margin-bottom: 15px;
+			color: $theme-color5;
+		}
+
+		p {
+			font-size: 1.8rem;
+			font-weight: 300;
+			color: $theme-color;
+
+			.fs-6 {
+				color: $theme-color5;
+			}
+		}
+
+		ul {
+			padding: 0;
+			margin: 15px 0;
+
+			li {
+				list-style: none;
+				padding: 5px 0;
+			}
+		}
+
+		.btn-warning {
+			font-weight: bold;
+			border-radius: 2px;
+			background: $theme-color2;
+			color: #fff;
+			margin-top: 20px;
+
+			&:hover {
+				background-color: $theme-color;
+				color: #fff;
+			}
+		}
+
+		hr {
+			border-bottom: 2px solid #b0b2b8;
+			border-top: 0 none;
+			padding: 0;
+		}
+
+		.badge {
+			padding: 10px;
+			font-size: 0.8rem;
+			font-weight: bold;
+			border-radius: 2px;
+			background: $theme-color;
+		}
+	}
+}
+
+.recent-news {
+	background-color: #f8f9fa;
+	text-align: center;
+
+	h2 {
+		margin-bottom: 1.5rem;
+
+	}
+
+	.news-card {
+		background: white;
+		padding: 15px;
+		border-radius: 8px;
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+		h4 {
+			font-weight: bold;
+			margin-top: 10px;
+			color: $theme-color5;
+		}
+
+		p {
+			font-size: 14px;
+			color: #6c757d;
+		}
+
+		em {
+			color: $theme-color2;
+		}
+
+		img {
+			border-radius: 5px;
+			height: 300px;
+			object-fit: cover;
+		}
+	}
+}
