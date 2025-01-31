@@ -3,7 +3,7 @@
 Este repositório contém um teste para desenvolvimento web, utilizando tecnologias modernas para estruturação de um site.
 
 ## Tecnologias Utilizadas
-- **PHP**: Backend para manipulação de dados.
+- **PHP**: Para modularização e inclusão de arquivos dinâmicos.
 - **HTML**: Estrutura do site.
 - **SASS**: Pré-processador CSS para melhor organização dos estilos.
 - **Bootstrap 5**: Framework CSS para estilização responsiva e componentes prontos.
